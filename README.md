@@ -12,7 +12,7 @@ A modern and responsive Todo App designed to help users organize and manage dail
 
 ##  Demo
 
-(link will be available soon)
+https://shivam0978.github.io/ToDo-App/
 
 
 ##  Tech Stack
@@ -37,7 +37,7 @@ todo-app/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/Shivam0978/todo-app.git
+git clone https://shivam0978.github.io/ToDo-App/
 ```
 
 2. Navigate to the project folder
