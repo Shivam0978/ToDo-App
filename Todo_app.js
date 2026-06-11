@@ -1,11 +1,12 @@
-let todolist=['gym','study','walking'];
-let tododate=['2/02/25','3/5/25','6/8/26'];
+let todolist=JSON.parse(localStorage.getItem("todolist")) || [];
+let tododate=JSON.parse(localStorage.getItem("tododate")) || [];
 displayer();
 function addTodo(){
   let input = document.querySelector(".firstTodo");
   let item = input.value;
   todolist.push(item);
   input.value = '';  // here innerText will not work cause we have use input tag,it is empty tag so no text is there to replace with.
+  localStorage.setItem("todolist",JSON.stringify(todolist));
   displayer();
 }
 function addDate(){
@@ -13,8 +14,18 @@ function addDate(){
   let item= input.value;
   tododate.push(item);
   input.value = '';
+  localStorage.setItem("tododate",JSON.stringify(tododate));
   displayer();
 
+}
+function deleteTodo(index){
+  todolist.splice(index,1);
+  tododate.splice(index,1);
+
+  localStorage.setItem("todolist",JSON.stringify(todolist));
+  localStorage.setItem("tododate",JSON.stringify(tododate));
+
+  displayer();
 }
 
 function displayer(){
@@ -26,8 +37,7 @@ function displayer(){
 newHtml = newHtml+ `
 <span class="items">${todolist[i]}</span>
 <span class="items">${tododate[i]}</span>
-<button class="delete" onclick="todolist.splice(${i},1);
-displayer();">Delete</button>
+<button class="delete" onclick="deleteTodo(${i})">Delete</button>
 `;
   }
     display.innerHTML =newHtml;
