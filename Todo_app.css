@@ -1,0 +1,95 @@
+
+ .heading{
+     text-align: center;
+      margin-top:40px;
+      font-style: oblique;
+      font-weight: 550;
+      font-size: 50px;
+      color:rgb(26, 4, 87);
+     
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .Items-display{
+      display: grid;  /* display in column-gap*/
+      grid-template-columns:  200px 150px 100px;
+      margin:10px;
+      row-gap: 20px;
+      column-gap: 10px;
+      align-items: center;
+      
+    }
+    .delete{
+      background-color: rgb(201, 6, 6);
+      height:42px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 17px;
+      cursor:pointer;
+      color:rgb(5, 20, 32);
+      
+    }
+    .delete:hover{
+      background-color:rgb(172, 8, 8);
+    }
+    .goalAdder{
+      margin-top:20px;
+       display: grid;  /* display in column-gap*/
+      grid-template-columns:  200px 160px 100px;
+      margin-bottom: 60px;
+      column-gap: 30px;
+
+    }
+    .adding{
+      background-color: rgb(8, 136, 94);
+      color:aliceblue;
+      height:41px;
+      width:85px;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 17px;
+      cursor:pointer;
+    }
+    .adding:hover{
+      background-color: rgb(8, 103, 8);
+    }
+    .firstTodo{
+      height:40px;
+      width:200px;
+      border:2px solid black;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: 550;
+    }
+    .firstdate{
+      height:40px;
+      width:150px;
+      border:2px solid black;
+      border-radius: 5px;
+       font-size: 20px;
+      font-weight: 550;
+      color:grey;
+    }
+    .items{
+      font-size: 22px;
+      font-weight: 550;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+      font-style:oblique;
+     
+    }
+    .whole{
+      display: flex;
+      justify-content: center;
+    }
+
+
+/*
+> create hover effect on buttons
+>local storage and reset button
+>hours /time
+>goal completed or not circle
+>date representation
+>clicking circle should have pretty animations
+>git repo
+
+*/
