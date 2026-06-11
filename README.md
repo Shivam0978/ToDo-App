@@ -37,7 +37,7 @@ todo-app/
 1. Clone the repository
 
 ```bash
-git clone https://github.com/Shivam0798/todo-app.git
+git clone https://github.com/Shivam0978/todo-app.git
 ```
 
 2. Navigate to the project folder
