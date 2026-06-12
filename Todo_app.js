@@ -1,9 +1,11 @@
 let todolist=JSON.parse(localStorage.getItem("todolist")) || [];
 let tododate=JSON.parse(localStorage.getItem("tododate")) || [];
+let todotime=JSON.parse(localStorage.getItem("todotime")) || [];
 displayer();
 function addTodo(){
   let input = document.querySelector(".firstTodo");
   let item = input.value;
+
   todolist.push(item);
   input.value = '';  // here innerText will not work cause we have use input tag,it is empty tag so no text is there to replace with.
   localStorage.setItem("todolist",JSON.stringify(todolist));
@@ -12,18 +14,31 @@ function addTodo(){
 function addDate(){
   let input =document.querySelector(".firstdate");
   let item= input.value;
+  if(item){
+  let [year,month,day] = item.split('-');item = `${day}/${month}/${year.slice(2)}`;
+  }
   tododate.push(item);
   input.value = '';
   localStorage.setItem("tododate",JSON.stringify(tododate));
   displayer();
 
 }
+function addTime(){
+  let input = document.querySelector(".firsttime");
+  let item = input.value;
+  todotime.push(item);
+  input.value = '';
+   localStorage.setItem("todotime",JSON.stringify(todotime));
+  displayer();
+}
 function deleteTodo(index){
   todolist.splice(index,1);
   tododate.splice(index,1);
+  todotime.splice(index,1);
 
   localStorage.setItem("todolist",JSON.stringify(todolist));
   localStorage.setItem("tododate",JSON.stringify(tododate));
+  localStorage.setItem("todotime",JSON.stringify(todotime));
 
   displayer();
 }
@@ -37,6 +52,7 @@ function displayer(){
 newHtml = newHtml+ `
 <span class="items">${todolist[i]}</span>
 <span class="items">${tododate[i]}</span>
+<span class="items">${todotime[i]}</span>
 <button class="delete" onclick="deleteTodo(${i})">Delete</button>
 `;
   }
@@ -56,3 +72,4 @@ both appears  with html
 */
 console.log(todolist);
 console.log(tododate);
+console.log(todotime);
