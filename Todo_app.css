@@ -11,7 +11,7 @@
     }
     .Items-display{
       display: grid;  /* display in column-gap*/
-      grid-template-columns:  200px 150px 100px;
+      grid-template-columns:  200px 150px 100px 100px; 
       margin:10px;
       row-gap: 20px;
       column-gap: 10px;
@@ -34,9 +34,10 @@
     .goalAdder{
       margin-top:20px;
        display: grid;  /* display in column-gap*/
-      grid-template-columns:  200px 160px 100px;
+      grid-template-columns:  200px 150px  100px 100px;
       margin-bottom: 60px;
       column-gap: 30px;
+      
 
     }
     .adding{
@@ -68,6 +69,7 @@
        font-size: 20px;
       font-weight: 550;
       color:grey;
+      align-items: center;
     }
     .items{
       font-size: 22px;
@@ -81,11 +83,22 @@
       display: flex;
       justify-content: center;
     }
+    .firsttime{
+       height:40px;
+      width:100px;
+      border:2px solid black;
+      border-radius: 5px;
+       font-size: 20px;
+      font-weight: 550;
+      color:grey;
+      align-items: center;
+    
+    }
 
 
 /*
-> create hover effect on buttons
->local storage and reset button
+
+
 >hours /time
 >goal completed or not circle
 >date representation
